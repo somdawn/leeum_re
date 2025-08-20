@@ -1,0 +1,83 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: #efefec;
+  color: #212121;
+}
+
+
+.container_sr { 
+  padding: 0 36px;
+  margin: 0 auto;
+}
+.header_sr { padding: 100px 0 50px; }
+.title_sr  { font-size: 36px; font-weight: 700; letter-spacing: -0.02em; text-align: center; }
+.Bigggg_box_sr { padding-bottom: 100px; }
+
+.masonry_sr{
+  column-count: 6;         
+  column-gap: 16px;
+  -webkit-column-count: 6; 
+  -webkit-column-gap: 16px;;
+}
+@media (max-width:1400px){ .masonry_sr{ column-count:4; -webkit-column-count:4; } }
+@media (max-width:1100px){ .masonry_sr{ column-count:3; -webkit-column-count:3; } }
+@media (max-width:780px) { .masonry_sr{ column-count:2; -webkit-column-count:2; } }
+@media (max-width:480px) { .masonry_sr{ column-count:1; -webkit-column-count:1; } }
+
+
+.card_sr{
+  display: inline-block;   
+  width: 100%;
+  break-inside: avoid;
+  -webkit-column-break-inside: avoid; 
+  margin: 0 0 16px;
+  position: relative;
+  background: #fff;
+  border: 2px solid #eee;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,.06);
+  transition: transform .12s ease, box-shadow .12s ease;
+  content-visibility: auto;
+  contain-intrinsic-size: 300px;     
+}
+.card_sr:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(0,0,0,.12);
+}
+
+
+.thumb_sr{
+  width: 100%;
+  height: auto;
+  display: block;     
+  object-fit: cover;
+  image-rendering: auto;
+}
+
+
+.card_sr::after{
+  content: "자세히 보기";
+  position: absolute; left: 0; top: 0;
+  width: 100%; height: 40px;
+  background: rgba(225,225,225,0.5);
+  display: flex; align-items: center; justify-content: center;
+  transform: translateY(-40px);
+  opacity: 0;
+  pointer-events: none;            
+  transition: transform .3s ease, opacity .3s ease;
+}
+.card_sr:hover::after{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.meta_sr{ padding: 10px 12px 14px; }
+.item_title_sr{ margin: 0 0 6px; font-size: 14px; font-weight: 700; }
+.item_desc_sr{ margin: 0; font-size: 12px; line-height: 1.5; color: #555; }
+
+@media (prefers-reduced-motion: reduce){
+  .card_sr, .card_sr::after { transition: none; }
+}

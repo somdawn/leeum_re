@@ -1,0 +1,607 @@
+.slider {
+    position: relative;
+    width: 100%;
+    max-width: 1920px;
+    height: clamp(360px, 56vw, 800px);
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 1s ease;
+    z-index: 0;
+}
+
+.slide.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.main_text_h {
+    font-size: 36px;
+    font-weight: 700;
+    padding-top: clamp(60px, 8vw, 120px);
+    padding-bottom: clamp(40px, 6vw, 91px);
+    text-align: center;
+    margin: 0;
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(240px, 305px));
+    gap: clamp(20px, 3vw, 50px);
+    justify-content: center;
+    padding: 0 clamp(16px, 5vw, 40px);
+    margin: 0 auto;
+}
+
+
+.card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.card img {
+    width: 100%;
+    aspect-ratio: 305 / 469;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+
+.card-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: auto;
+}
+
+.title {
+    font-size: clamp(18px, 1.6vw, 24px);
+    font-weight: 700;
+    margin: 5px 0;
+}
+
+.subtitle {
+    font-size: clamp(14px, 1.3vw, 18px);
+    margin: 5px 0;
+}
+
+.date {
+    font-size: clamp(12px, 1.1vw, 14px);
+    margin: 5px 0;
+    opacity: .9;
+}
+
+.exhibition_sc {
+    position: relative;
+    width: 100%;
+    max-width: 1207px;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+
+.exhibition_sc img {
+    width: 100%;
+    display: block;
+    height: auto;
+}
+
+.exhibitionTxt_sc {
+    position: absolute;
+    top: 40%;
+    left: 5%;
+    color: white;
+    max-width: 500px;
+    font-size: 13px;
+    line-height: 1.3;
+}
+
+.exhibitionTxt_sc h2 {
+    margin: 0 0 20px 0;
+    font-size: 28px;
+}
+
+.exhibitionTxt_sc a {
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.hover {
+    position: relative;
+    display: inline-block;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.hover::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    background: #FFFFFF;
+    transition: width 0.4s ease;
+}
+
+.hover:hover::after {
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+
+.collectionWorld_sc {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+
+.collectionWorld_sc a:first-child {
+    padding-right: 20px;
+}
+
+.collectionImg_sc {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.collectionImg_sc img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.collectionImg_sc:hover img {
+    transform: scale(1.05);
+}
+
+.collectionImg_sc::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.3s ease;
+    z-index: 1;
+}
+
+.collectionImg_sc:hover::before {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.overlay {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    color: white;
+    text-align: center;
+    font-size: 17px;
+    font-weight: bold;
+    pointer-events: none;
+    transition: transform 0.3s ease;
+    transform: translateY(0);
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+    z-index: 9;
+}
+
+.collectionImg_sc:hover .overlay {
+    transform: translateY(-10px);
+}
+
+.video_material_box_jy {
+    max-width: 1520px;
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    margin-bottom: 50px;
+
+}
+
+/* 영상자료 */
+.video_material_title_jy {
+    margin: 0 auto;
+    width: 140px;
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+/* 더보기 */
+.video_material_moreBtn_jy {
+    text-align: right;
+    margin: 0;
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-weight: 600;
+
+
+}
+
+.video_material_moreBtn_jy a {
+    color: inherit;
+    /* 글자색 상속 */
+    text-decoration: none;
+    /* 밑줄 제거 */
+}
+
+.video_material_img_box_jy {
+    display: flex;
+    max-width: 1520px;
+    width: 100%;
+    gap: 50px;
+    box-sizing: border-box;
+}
+
+.video_material_img_box_jy div {
+    flex: 1;
+    box-sizing: border-box;
+    margin-right: 0;
+}
+
+.video_material_img_box_jy div>img {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+div>.title_jy {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+div>.text_jy {
+    font-size: 16px;
+}
+
+
+/* 밑줄 애니메이션 */
+.title_jy {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    padding-bottom: 4px;
+
+}
+
+.title_jy::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background-color: #D0B890;
+    transition: width 1.3s ease;
+}
+
+.title_jy:hover::after {
+    width: 100%;
+}
+
+
+
+
+
+/* notice */
+
+
+.notice_box_jy {
+    max-width: 1520px;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+.notice_text_box_jy {
+    max-width: 1520px;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 100px;
+
+}
+
+.line_box_jy {
+    border: 2px solid black;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    margin-top: 20px;
+}
+
+.notice_text_jy {
+    display: flex;
+    gap: 100px;
+    border: 1px solid black;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+
+}
+
+.notice_text_jy>p {
+    display: flex;
+    align-items: center;
+    /* 수직 가운데 */
+    justify-content: center;
+
+}
+
+
+
+.text_3_jy p {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+.notice_text_1_jy {
+
+    flex: 1;
+}
+
+.text_1_jy {
+    font-weight: 600;
+}
+
+
+.notice_text_2_jy {
+    font-size: 16px;
+    flex: 2;
+}
+
+.notice_text_3_jy {
+    font-size: 16px;
+    flex: 1;
+}
+
+.notice_text_jy a {
+    color: inherit;
+    /* 글자색 상속 */
+    text-decoration: none;
+    /* 밑줄 제거 */
+    margin-bottom: 10px;
+}
+
+
+
+.text_2_jy {
+    color: #212121;
+    /* 기본 텍스트 색상 */
+    transition: color 0.3s ease;
+    /* 부드럽게 전환 */
+}
+
+.text_2_jy:hover {
+    color: #D0B890;
+    /* 마우스 올렸을 때 색상 */
+
+}
+
+@media (max-width: 1024px) {
+    .container {
+        grid-template-columns: repeat(2, minmax(220px, 1fr));
+    }
+
+    .video_material_img_box_jy div:last-child {
+        display: none;
+    }
+
+    .notice_box_jy {
+        max-width: 1024px;
+        width: 100%;
+    }
+
+    .video_material_moreBtn_jy {
+        font-size: 18px;
+    }
+
+    .title_jy {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 720px) {
+    .video_material_img_box_jy div:nth-child(2) {
+        display: none;
+    }
+
+    .video_material_moreBtn_jy {
+        font-size: 16px;
+    }
+
+    .text_3_jy p {
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .notice_text_1_jy {
+        font-size: 14px;
+
+    }
+
+    .notice_text_2_jy {
+        font-size: 14px;
+    }
+
+    .notice_text_3_jy {
+        font-size: 14px;
+    }
+
+    div>.title_jy {
+        font-size: 16px;
+    }
+
+    div>.text_jy {
+        font-size: 14px;
+    }
+
+    .video_material_box_jy>.video_material_title_jy {
+        font-size: 30px;
+    }
+
+    .video_material_title_jy {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 640px) {
+    .container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0 16px;
+    }
+
+    .main_text_h {
+        padding-top: 48px;
+        padding-bottom: 32px;
+    }
+
+    .slider {
+        height: clamp(240px, 48vw, 520px);
+    }
+}
+
+@media (hover: hover) and (min-width: 1025px) {
+    .card {
+        position: relative;
+
+        overflow: hidden;
+        transform-style: preserve-3d;
+        transition: transform .25s ease, box-shadow .25s ease;
+        will-change: transform;
+    }
+
+    .card::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0);
+        transition: background .25s ease, opacity .25s ease;
+        opacity: 0;
+        z-index: 1;
+    }
+
+    .card::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(600px 400px at var(--mx, 50%) var(--my, 50%),
+                rgba(255, 255, 255, .28), transparent 60%);
+        mix-blend-mode: screen;
+        opacity: 0;
+        transition: opacity .25s ease;
+        pointer-events: none;
+        z-index: 2;
+    }
+
+    .card img {
+        transition: transform .35s ease;
+        will-change: transform;
+    }
+
+    .card .card-text {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 14px 16px;
+        color: #fff;
+        background: linear-gradient(to top, rgba(0, 0, 0, .55), rgba(0, 0, 0, 0));
+        transform: translateY(100%);
+        opacity: 0;
+        transition: transform .35s ease, opacity .35s ease;
+        z-index: 3;
+        pointer-events: none;
+    }
+
+    .card.is-hovered {
+        transform: scale(1.02);
+        /* rotateX, rotateY 제거 */
+        box-shadow: 0 18px 40px rgba(0, 0, 0, .18);
+    }
+
+    .card.is-hovered::before {
+        background: rgba(0, 0, 0, .22);
+        opacity: 1;
+    }
+
+    .card.is-hovered::after {
+        opacity: .9;
+    }
+
+    .card.is-hovered img {
+        transform: scale(1.07);
+    }
+
+    .card.is-hovered .card-text {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+@media (max-width: 1024px),
+(hover: none) {
+    .card {
+        position: static;
+        border-radius: 0;
+        overflow: visible;
+        transform: none !important;
+        box-shadow: none !important;
+    }
+
+    .card::before,
+    .card::after {
+        content: none;
+    }
+
+    .card img {
+        transform: none !important;
+        transition: none;
+    }
+
+    .card .card-text {
+        position: static;
+        padding: 0;
+        color: inherit;
+        background: none;
+        transform: none !important;
+        opacity: 1 !important;
+        pointer-events: auto;
+    }
+}

@@ -1,0 +1,286 @@
+
+
+body{
+  background-color: #ECEBE6;
+}
+
+
+main {
+    width: 100%;
+    margin: 0 auto;
+ 
+
+  }
+
+
+/* top_section */
+.top_section_jy{
+    max-width: 1720px;
+    width: 100%;
+    margin: 0 auto;
+    margin: 0 auto;
+    padding: 0 50px; /* 양옆 여백 추가 */
+    box-sizing: border-box; /* padding 포함 계산 */
+   
+}
+
+
+
+.top_section_title_jy{
+    padding: 5px;
+    font-size: 36px;
+    color: #212121;
+    position: relative;
+    display: block;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: fit-content;   /* 텍스트만큼만 너비 */
+    margin: 50px auto; 
+    font-weight: 700;
+}
+
+
+
+/* .top_section_title_jy::after,
+.top_section_title_jy::before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(to right, #D0B890, #9DABB4);
+  bottom: -4px;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s ease-out;
+}
+
+.top_section_title_jy::before {
+  top: -2px;
+  transform-origin: left;
+}
+
+.top_section_title_jy:hover::after,
+.top_section_title_jy:hover::before {
+  transform: scaleX(1);
+} */
+
+
+/* tab  */
+.tab-wrap_jy {
+    display: flex;
+    gap: 50px;
+    margin: 20px 0  50px 0;
+
+  }
+ 
+
+
+.box_jy{
+    display: inline-block;
+    margin-left: 0;
+    font-size: 20px;
+    color: #212121;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+
+  .box_jy.color {
+    color: #D0B890; /* 클릭시 바뀌는 색상 */
+  }
+
+  
+  
+  a {
+    color: inherit;         /* 부모 요소의 텍스트 색상 따라감 */
+    text-decoration: none;  /* 밑줄 제거 */
+  }
+
+
+/* 그리드: 1720px 안에 4칸 배치 */
+.newsletter_grid_jy {
+    width: 100%;
+    max-width: 1720px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px;
+    box-sizing: border-box;
+  }
+  
+  /* 그리드 박스 */
+  .newsletter_grid_box_jy {
+    height: auto;
+    
+  }
+  
+  .newsletter_grid_box_jy .img_box_jy {
+    height: 290px;
+    overflow: hidden;
+  }
+  
+  .newsletter_grid_box_jy .img_box_jy> img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+    .text_box_jy{
+        display: flex;
+        justify-content: space-between;
+    }
+
+  
+  .newsletter_grid_box_jy .title_jy {
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+  }
+
+  .newsletter_grid_box_jy .text_box_jy>.text_box_under_jy{
+    font-size: 16px;
+    color: #3B4350;
+      
+  }
+  
+
+
+
+
+/* 밑줄 애니메이션 */
+.title_jy {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    padding-bottom: 4px;
+   
+  }
+
+  .title_jy::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background-color: #9DABB4;
+    transition: width 1.3s ease;
+  }
+
+  .title_jy:hover::after {
+    width: 100%;
+  }
+
+
+
+
+
+
+  /* page_box */
+
+  .page_box{
+    max-width: 330px;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 50px;
+    display: flex;
+    gap: 30px;
+    font-size: 18px;
+    align-items: center;
+    box-sizing: border-box;
+  }
+
+  .page_box p {
+      margin: 0;            
+      padding: 0;
+      align-items: center;
+      justify-content: center;
+      color: #212121;
+      font-size: 18px;
+  }
+
+  .page_box img {
+    width: 12px;
+    height: 17px;
+    object-fit: contain;
+    vertical-align: middle;
+}
+
+
+
+footer{
+  margin-top: 100px;
+}
+
+
+
+
+
+
+  /* 반응형 */
+  
+  @media (max-width: 1024px) {
+    .newsletter_grid_jy {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+    .tab-wrap_jy {
+    display: flex;
+    gap: 50px;
+    margin: 20px 0  25px 0;
+    }
+
+    .box_jy{
+    font-size: 20px;
+}
+
+  .top_section_title_jy{
+    font-size: 36px;
+  }
+  
+
+  }
+  
+  @media (max-width: 720px) {
+   
+  
+    .newsletter_grid_jy {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+    .tab-wrap_jy {
+    display: flex;
+    gap: 50px;
+    margin: 20px 0 ;
+  }
+
+    .box_jy{
+    font-size: 18px;
+}
+
+    .text_jy>a{
+      font-size: 12px;
+    }
+
+    .top_section_title_jy{
+    font-size: 30px;
+  }
+  }
+
+
+
+  .page_box{
+    max-width: 330px;
+    width: 100%;
+    height: 30px;
+    margin: 0 auto;
+    margin-top: 50px;
+    display: flex;
+    gap: 50px;
+    font-size: 24px;
+   align-items: center;
+    box-sizing: border-box;
+  }
+
+

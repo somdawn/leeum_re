@@ -1,0 +1,169 @@
+main {
+    width: 100%;
+    height: 100%;
+    background-color: #ECEBE6;
+    color: #212121;
+}
+
+.visitSec_s {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.visitTit_s {
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.visitThum_s {
+    width: 90%;
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(./../img/leeum_orora.jpg);
+}
+
+article {
+    display: flex;
+    gap: 5%;
+    padding: 100px 200px 0;
+}
+
+.circleTit_s {
+    width: 15vw;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    font-size: 28px;
+    font-weight: 600;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-content: center;
+    transition: all 0.5s;
+}
+
+.circleTit_s>p {
+    text-align: center;
+}
+
+.circle1_s {
+    background-image: url(./../img/banner_1.jfif);
+}
+
+.circle2_s {
+    background-image: url(./../img/banner_2.jfif);
+}
+
+.visitTxt_s {
+    width: 100%;
+    align-content: center;
+}
+
+.visitTxt_s>ul:first-child>li {
+    font-size: 16px;
+    padding: 20px 0 15px;
+    border-bottom: 1px solid #212121;
+}
+
+.visitTxt_s:last-child>ul:first-child>li {
+    display: flex;
+    justify-content: space-between;
+}
+
+.smallTxt_s {
+    padding-top: 40px;
+    padding-bottom: 100px;
+}
+
+.smallTxt_s>li {
+    font-size: 14px;
+    list-style: inside;
+    line-height: 1.5;
+    padding-top: 10px;
+}
+
+.visitBtn_s {
+    display: grid;
+    place-items: center;
+}
+
+.visitBtn_s>a {
+    text-decoration: none;
+    font-size: 16px;
+    text-align: center;
+    color: #fff;
+    background-color: #D0B890;
+    padding: 15px 100px;
+    transition: all 0.5s;
+}
+
+
+@media only screen and (max-width: 900px) {
+
+    .visitThum_s {
+        height: 300px;
+    }
+
+    article {
+        display: block;
+        padding: 100px 100px 0;
+    }
+
+    .visitTxt_s>ul {
+        padding-top: 40px;
+    }
+
+    .circleTit_s {
+        width: 20vw;
+        font-size: 20px;
+    }
+
+    .visitTxt_s>ul:first-child>li {
+        font-size: 14px;
+    }
+
+    .smallTxt_s>li {
+        font-size: 12px
+    }
+
+    .visitBtn_s>a {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+
+    .visitThum_s {
+        width: 100%;
+        height: 300px;
+    }
+
+    article {
+        display: block;
+        padding: 100px 20px 0;
+    }
+
+    .visitTxt_s>ul {
+        padding-top: 40px;
+    }
+
+    .circleTit_s {
+        width: 30vw;
+    }
+
+    .visitTxt_s>ul:first-child>li {
+        font-size: 12px;
+    }
+
+    .smallTxt_s>li {
+        font-size: 10px
+    }
+
+    .visitBtn_s>a {
+        font-size: 12px;
+        padding: 15px 50px;
+    }
+}

@@ -1,0 +1,168 @@
+main {
+    width: 100%;
+    height: 100%;
+    background-color: #ECEBE6;
+    color: #212121;
+}
+
+.facilitySec_s {
+    padding: 50px 200px;
+}
+
+.facilitySec_s>article {
+    padding: 50px 0;
+}
+
+.facilityTit_s {
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+    padding-bottom: 100px;
+}
+
+.maptit_s {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 25px 10px;
+}
+
+.mapex_s {
+    font-size: 14px;
+    margin: 0 10px;
+    line-height: 1.5;
+}
+
+.floorArt_s>div {
+    width: 100%;
+    height: 450px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    align-content: center;
+}
+
+.floorArt_s>div {
+    background-image: url(./../img/amenities_1.png);
+}
+
+.floorArt_s>div:last-child {
+    background-image: url(./../img/amenities_2.png);
+}
+
+.flex_s {
+    display: flex;
+    gap: 20px;
+}
+
+.amenities_s {
+    flex: 1;
+    padding: 10px 5px;
+    color: #fff;
+    background-color: #3B4350;
+}
+
+.amenities_s:nth-child(2) {
+    background-color: #D0B890;
+}
+
+.amenities_s>div {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-content: center;
+    margin-bottom: 20px;
+}
+
+.amenities_s:first-child>div:first-child {
+    width: 100%;
+    height: 200px;
+    background-image: url(./../img/cafe_img.png);
+}
+
+.amenities_s:nth-child(2)>div:first-child {
+    width: 100%;
+    height: 200px;
+    background-image: url(./../img/store_img.png);
+}
+
+.amenities_s:last-child>div:first-child {
+    width: 100%;
+    height: 200px;
+    background-image: url(./../img/convenience_img.jpg);
+}
+
+.amenitiesTit_s {
+    font-size: 18px;
+    font-weight: 500;
+    padding-bottom: 30px;
+}
+
+.underLine_s {
+    width: 0;
+    height: 1px;
+    background-color: #fff;
+}
+
+.underLine_s.active_s {
+    width: 200px;
+    transition: 0.5s;
+}
+
+.amenitiesTxt_s {
+    font-size: 14px;
+    line-height: 2;
+}
+
+@media only screen and (max-width: 1280px) {
+    .facilitySec_s {
+        padding: 50px 100px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .flex_s {
+        display: block;
+    }
+    .amenities_s {
+        margin-bottom: 10px;
+    }
+
+    .amenities_s:last-child {
+        margin-bottom: 0;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .facilitySec_s {
+        padding: 50px 20px;
+    }
+
+    .facilityTit_s {
+        font-size: 30px;
+    }
+
+    .maptit_s {
+    font-size: 14px;
+}
+
+.mapex_s {
+    font-size: 12px;
+}
+
+    iframe {
+        height: 300px;
+    }
+
+    .floorArt_s>div {
+        width: 100%;
+        height: 300px;
+    }    
+
+    .amenitiesTit_s {
+        font-size: 14px;
+    }
+
+    .amenitiesTxt_s {
+        font-size: 12px;
+    }
+}

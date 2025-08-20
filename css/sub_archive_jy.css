@@ -1,0 +1,505 @@
+
+
+body{
+  background-color: #ECEBE6;
+}
+main{
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1720px;
+    padding: 0 50px;
+    box-sizing: border-box;
+
+}
+
+
+/* top_section */
+.top_section_jy{
+  max-width: 1720px;
+  width: 100%;
+  margin: 0 auto;
+  margin: 0 auto;
+  padding: 0 50px; /* 양옆 여백 추가 */
+  box-sizing: border-box; /* padding 포함 계산 */
+  font-weight: 700;
+ 
+}
+
+
+
+.top_section_title_jy{
+  
+  font-size: 36px;
+  color: #212121;
+  position: relative;
+  display: block;
+  width: fit-content;   /* 텍스트만큼만 너비 */
+  margin: 0 auto;
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+
+
+.top_section_title_jy::after,
+.top_section_title_jy::before{
+content: '';
+position: absolute;
+width: 100%;
+height: 4px;
+background: linear-gradient(to right, #D0B890, #9DABB4);
+bottom: -4px;
+left: 0;
+transform: scaleX(0);
+transform-origin: right;
+transition: transform 0.4s ease-out;
+}
+
+.top_section_title_jy::before {
+top: -2px;
+transform-origin: left;
+}
+
+.top_section_title_jy:hover::after,
+.top_section_title_jy:hover::before {
+transform: scaleX(1);
+}
+
+
+
+.top_section_image_box_jy{
+    max-width: 1140px;
+    width: 100%;
+    height: 526px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+.top_section_image_box_jy>img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.top_section_text_box_jy{
+    margin: 0 auto;
+    max-width: 1140px;
+    width: 100%;
+    text-align: center;
+    border: 1px solid black;
+    box-sizing: border-box;
+    padding: 30px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); 
+    color: #3B4350;
+}
+
+
+
+
+/* bottm_section */
+
+.bottom_section_jy{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.bottom_box1_jy,
+.bottom_box1_2_jy{
+    max-width: 1720px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    gap: 50px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    padding: 90px 100px;
+    margin-bottom: 50px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); 
+
+  
+    
+}
+
+
+
+.bottom_box1_jy>.bottom_box1_image_box_jy,
+.bottom_box1_2_jy>.bottom_box1_2_image_box_jy{
+    max-width: 500px;
+    width: 100%;
+    aspect-ratio: 1 / 1; /* 정사각형 */
+    overflow: hidden;
+}
+
+.bottom_box1_2_jy>.bottom_box1_2_image_box_jy{
+    max-width: 500px;
+    width: 100%;
+    aspect-ratio: 1 / 1; /* 정사각형 */
+    overflow: hidden;
+}
+
+
+
+.bottom_box1_jy>div>img{
+  max-width: 500px;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block; 
+}
+
+.bottom_box1_2_jy>div>img{
+  max-width: 500px;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block; 
+}
+
+
+
+.bottom_box1_text_box_jy,
+.bottom_box1_2_text_box_jy{
+    max-width: 725px;
+    width: 100%;
+    padding-right: 0; 
+    box-sizing: border-box;
+}
+
+
+.bottom_box1_title_jy,
+.bottom_box1_2_title_jy{
+     text-align: center;
+     font-size: 28px;
+     padding-bottom: 50px;
+     color: #212121;
+}
+  
+.bottom_box1_text_jy,
+.bottom_box1_2_text_jy{
+    max-width: 725px;
+    width: 100%;
+    padding: 50px;
+    text-align: center;
+    border: 1px solid black;
+    font-size: 16px;
+    box-sizing: border-box;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); 
+    color: #3B4350;
+
+}
+
+
+/* image box1 - js */
+.bottom_box1_image_box_jy,.bottom_box1_2_image_box_jy {
+  opacity: 0; /* 처음에는 안 보이도록 설정 */
+  transform: scale(0.7); /* 70%로 보이게 설정 */
+  transition: opacity 1.2s , transform 1.2s ; /* 투명도가 변할 떄 1.2초로 변함 */
+}
+
+.bottom_box1_image_box_jy.zoomIn,.bottom_box1_2_image_box_jy.zoomIn {
+  opacity: 1; /* 이미지보이도록(100%) */
+  transform: scale(1); /* 70% -> 100% 크기로 */
+}
+
+
+/* textbox- js */
+.bottom_box1_text_jy,.bottom_box1_2_text_jy {
+    opacity: 0; /* 처음에는 안 보이도록 설정 */
+    transition: opacity 0.8s  ; /* 투명도가 변할 떄 0.8초로 변함 */
+  }
+  
+  .bottom_box1_text_jy.fadeIn,.bottom_box1_2_text_jy.fadeIn {
+    opacity: 1; /* 이미지보이도록(100%) */
+    transform: scale(1); /* 70% -> 100% 크기로 */
+  }
+
+
+  
+
+
+
+
+/* 장소 이미지 3개 */
+.bottom_box2_jy{
+    max-width: 1720px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-around;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); 
+    padding: 50px;
+    margin: 0 auto;
+    color: #212121;
+}
+
+.bottom_box2_jy>div{
+  max-width:266px;
+  width: 100%;
+  height: auto;
+
+}
+
+.bottom_box2_jy>div>img{
+  width: 100%; height: 167px;
+}
+
+
+.bottom_box2_jy>div>p{
+  padding-top: 45px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.img_effect {
+  opacity: 0.5 !important;  /*aos 위에*/
+  transition: opacity 0.3s ease;
+}
+
+
+footer{
+  margin-top: 100px;
+}
+
+
+
+
+
+/* 반응형 */
+@media (max-width: 1500px) {
+
+/* 미술관 기록 텍스트 */
+.bottom_box1_text_jy br,
+.bottom_box1_2_text_jy br{
+  display: none;
+}
+
+}
+
+
+@media (max-width: 1150px) {
+
+/* 미술관 기록 텍스트 */
+.bottom_box1_text_jy br,
+.bottom_box1_2_text_jy br{
+  display: none;
+}
+
+.bottom_box1_text_jy,
+.bottom_box1_2_text_jy{
+  padding: 20px;
+  font-size: 14px;
+  max-width: 420px;
+  width: 100%;
+  height: auto;
+   
+}
+}
+
+
+
+@media (max-width: 1024px) {
+ 
+  /* 아카이브 상단 */
+  .top_section_image_box_jy{
+    max-width: 700px;
+    width: 100%;
+    height: 250px;
+    margin-bottom: 25px;
+}
+  .top_section_text_box_jy{
+    max-width: 700px;
+    width: 100%;
+  }
+  .top_section_text_box_jy p br {
+    display: none;
+  }
+
+  .top_section_title_jy{
+  
+  font-size: 36px;
+}
+
+.bottom_box1_text_jy br,
+.bottom_box1_2_text_jy br{
+  display: none;
+}
+
+/* 미술관 기록 */
+.bottom_box1_jy,
+.bottom_box1_2_jy{
+    max-width: 943px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    margin-bottom: 25px;
+   margin-top: -25px;
+}
+
+
+.bottom_box1_jy>.bottom_box1_image_box_jy{
+  max-width: 500px;
+  width: 100%;
+}
+
+.bottom_box1_2_jy>.bottom_box1_2_image_box_jy{
+  max-width: 400px;
+  width: 100%;
+  
+}
+
+.bottom_box1_jy>div>img,
+.bottom_box1_2_jy>div>img{
+  max-width: 500px;
+  width: 100%;
+
+}
+
+.bottom_box1_text_box_jy,
+.bottom_box1_2_text_box_jy{
+  max-width: 700px;
+  width: 100%;
+  height: auto;
+}
+
+.bottom_box1_title_jy,
+.bottom_box1_2_title_jy{
+  font-size: 30px;
+}
+
+
+.bottom_box1_text_jy,
+.bottom_box1_2_text_jy{
+  padding: 20px;
+  font-size: 14px;
+}
+
+/* 장소 3개 */
+.bottom_box2_jy{
+  max-width: 943px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.bottom_box2_jy>div{
+  max-width: 200px;
+  width: 100%;
+  height: auto;
+}
+
+.bottom_box2_jy>div>img{
+  max-width:200px;
+  width: 100%;
+  height: 108px;
+}
+
+.bottom_box2_jy>div>p{
+  padding-top: 45px;
+  text-align: center;
+  font-size: 18px;
+}
+
+}
+
+
+@media (max-width: 970px) {
+
+  .bottom_box1_image_box_jy,.bottom_box1_2_image_box_jy{
+    display: flex;
+    align-items: center; /* 세로 가운데 */
+    justify-content: center; /* 가로 가운데 (필요 시) */
+  }
+
+  .bottom_box1_image_box_jy,.bottom_box1_2_image_box_jy>img{
+     max-width: 500px;
+      width: 100%;
+   
+      }
+
+      .bottom_box2_jy{
+        gap: 10px;
+      }
+
+      .top_section_title_jy{
+        font-size: 30px;
+      }
+
+}
+
+
+@media (max-width: 720px) {
+
+
+  .top_section_image_box_jy {
+    margin: 0 auto;
+    max-width: 500px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .top_section_text_box_jy{
+    margin: 0 auto;
+    max-width: 500px;
+    width: 100%;
+  }
+
+
+  .bottom_box1_text_jy,
+  .bottom_box1_2_text_box_jy {
+    margin: 0 auto;
+    
+  }
+
+  .bottom_box1_jy,
+  .bottom_box1_2_jy,
+  .bottom_box2_jy{
+    display: block;
+  }
+
+
+  /* 장소 3개 */
+  .bottom_box2_jy div{
+      margin: 0 auto;
+      padding-top: 20px;
+  }
+
+  .bottom_box2_jy img{
+    max-width: 200px;
+    width: 200px;
+  }
+
+
+  .bottom_box2_jy p{
+      margin-top: -30px;
+      margin-bottom: 50px;
+  }
+
+.bottom_box1_2_image_box_jy{
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+  .bottom_box1_2_text_jy,
+  .bottom_box1_2_text_box_jy {
+    margin: 0 auto;
+    
+  }
+
+.bottom_box1_title_jy,
+.bottom_box1_2_title_jy{
+  font-size: 25px;
+  margin-top: 50px;
+}
+.top_section_title_jy{
+  font-size: 30px;
+}
+
+.bottom_box1_title_jy{
+font-size: 28px;}
+}
+
+

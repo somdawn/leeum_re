@@ -1,0 +1,166 @@
+body { 
+    margin:0; 
+    padding:0; 
+    overflow-x:hidden;
+    background-color: #ECEBE6;
+}
+
+.membership-notice{
+    max-width: 1522px;
+    margin: 0 auto;
+    padding: 0 16px;  
+    text-align: center;
+    box-sizing: border-box;
+}
+
+
+.notice-title{
+  font-size: 36px;
+  font-weight: 700;
+  margin: 100px 0 50px;
+}
+
+
+.notice-table{
+  width: 100%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.notice-table th,
+.notice-table td{
+  font-size: 18px;
+  vertical-align: middle;
+}
+
+.notice-table th{
+  font-weight: 700;
+  border-bottom: 2px solid #000;
+  padding: 12px 0 12px;
+}
+
+.notice-table td{
+  padding: 42px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+
+.col-no, .col-date { padding: 0; }
+.col-no{
+  width: 120px;
+  text-align: left;
+  padding-left: 30px;
+}
+.col-title{
+  text-align: center;   
+  margin: 0;
+  padding: 0;
+  overflow: hidden;    
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.col-date{
+  width: 150px;
+  text-align: right;
+  padding-right: 30px;
+}
+
+
+.pagination{
+  width: 100%;
+  margin: 50px 0 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+.pagination .page-num{
+  font-size: 18px;
+  font-weight: 400;
+  text-decoration: none;
+  color: #000;
+}
+.pagination .page-num.active{ 
+    font-weight: 700; 
+  }
+.pagination img{
+  width: 10px; height: 17px; vertical-align: middle;
+}
+
+
+
+
+@media (max-width: 1199px){
+  .notice-table th, .notice-table td{ font-size: 17px; }
+  .notice-table td{ padding: 36px 0; }
+  .col-no{ width: 100px; padding-left: 20px; }
+  .col-date{ width: 140px; padding-right: 20px; }
+  .pagination{ margin: 70px auto 80px; gap: 40px; }
+}
+
+
+@media (max-width: 899px){
+  .notice-title{ 
+      margin: 80px 0 70px; 
+  }
+  .notice-table th, .notice-table td{
+       font-size: 16px;
+  }
+  .notice-table td{ 
+      padding: 28px 0; 
+  }
+  .col-no{ 
+      width: 80px; padding-left: 14px; 
+  }
+  .col-date{
+      width: 120px; padding-right: 14px; 
+  }
+  .pagination{ 
+      gap: 32px; 
+  }
+}
+
+@media (max-width: 768px){
+  .notice-table th.col-no,
+  .notice-table td.col-no{
+    display: none;
+  }
+  .col-title{ 
+      text-align: left; 
+  } 
+  .col-date{ 
+      text-align: right; 
+  }
+  .notice-table th, .notice-table td{ 
+      font-size: 15px; 
+  }
+  .notice-table td{ 
+      padding: 22px 0; 
+  }
+  .col-date{ 
+      padding-right: 8px; 
+  }
+  .pagination{
+       margin: 50px auto 60px; gap: 24px; 
+      }
+  .pagination .page-num{ 
+      font-size: 16px; 
+  }
+}
+
+
+@media (max-width: 480px){
+  .notice-title{
+       margin: 64px 0 48px; 
+      }
+  .notice-table th, .notice-table td{ 
+      font-size: 14px; 
+  }
+  .notice-table td{ 
+      padding: 18px 0; 
+  }
+  .pagination{ 
+      gap: 18px; 
+  }
+}

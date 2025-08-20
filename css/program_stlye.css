@@ -1,0 +1,198 @@
+main {
+    width: 100%;
+    height: 100%;
+    background-color: #ECEBE6;
+    color: #212121;
+}
+
+.programSec_s {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.programTit_s {
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.programThum_s {
+    width: 90%;
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(./../img/leeum_orora.jpg);
+}
+
+article {
+    padding: 100px 200px 0;
+}
+
+.programTag_s>ul {
+    display: flex;
+    gap: 10px;
+    font-size: 20px;
+    margin-bottom: 50px;
+}
+
+.programTag_s li {
+    padding: 5px;
+    align-content: center;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.programFig_s {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+
+.programFig_s>figure {
+    overflow: hidden;
+}
+
+figure>div {
+    height: 200px;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.programFig_s figcaption {
+    padding: 10px 0;
+}
+
+.programFig_s .proframTit_s {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.programFig_s .programDate_s {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.programFig_s .tag_s {
+    display: flex;
+    gap: 10px;
+    font-size: 14px;
+}
+
+figcaption>div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.programTag_s>ul>li.selet_s {
+    color: #fff;
+    background-color: #D0B890;
+}
+
+.arrowSide_s {
+    width: 100%;
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.arrowSide_s a {
+    color: #212121;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.arrowBtn_s {
+    height: 18px;
+}
+
+.arrowBtn_s img {
+    height: 100%;
+}
+
+@media only screen and (max-width: 1315px) {
+    .programTit_s {
+        font-size: 36px;
+    }
+
+    .programTag_s>ul {
+        font-size: 16px;
+    }
+
+    .programFig_s {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media only screen and (max-width: 1185px) {
+
+    article {
+        padding: 100px 100px 0;
+    }
+
+    .programTag_s>ul {
+        gap: 5px;
+    }
+}
+
+@media only screen and (max-width: 925px) {
+
+    article {
+        padding: 100px 100px 0;
+    }
+
+    .programTag_s>ul>li:nth-child(n+9) {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+
+    article {
+        padding: 100px 20px 0;
+    }
+
+    .programThum_s {
+        width: 100%;
+    }
+
+    .programFig_s {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .programFig_s .proframTit_s {
+        font-size: 12px;
+    }
+
+    .programFig_s .programDate_s {
+        font-size: 10px;
+    }
+
+    .programFig_s .tag_s {
+        font-size: 10px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+
+    .programTag_s>ul {
+        font-size: 12px;
+    }
+
+    .programFig_s {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .arrowSide_s a {
+        font-size: 10px;
+    }
+
+    .arrowBtn_s {
+        height: 10px;
+    }
+}
