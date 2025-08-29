@@ -322,7 +322,7 @@ div>.text_jy {
     max-width: 1520px;
     width: 100%;
     box-sizing: border-box;
-    margin: 0 auto
+    margin: 0 auto;
     padding: 0 100px;
 }
 
@@ -606,5 +606,4 @@ div>.text_jy {
         opacity: 1 !important;
         pointer-events: auto;
     }
-
 }
