@@ -227,6 +227,7 @@ h1 {
     margin: 0 auto;
     box-sizing: border-box;
     margin-bottom: 50px;
+    padding: 0 100px;
 
 }
 
@@ -321,7 +322,8 @@ div>.text_jy {
     max-width: 1520px;
     width: 100%;
     box-sizing: border-box;
-    margin: 0 auto;
+    margin: 0 auto
+    padding: 0 100px;
 }
 
 .notice_text_box_jy {
@@ -604,4 +606,5 @@ div>.text_jy {
         opacity: 1 !important;
         pointer-events: auto;
     }
+
 }
