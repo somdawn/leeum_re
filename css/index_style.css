@@ -234,7 +234,9 @@ h1 {
 /* 영상자료 */
 .video_material_title_jy {
     margin: 0 auto;
-    width: 140px;
+    width:auto;
+    max-width:100%;
+    line-height:1.25;
     font-size: 36px;
     margin-bottom: 20px;
     font-weight: 700;
@@ -288,11 +290,11 @@ div>.text_jy {
 
 /* 밑줄 애니메이션 */
 .title_jy {
+    line-height:1.25;
+    padding-bottom:6px;
     position: relative;
     display: inline-block;
     cursor: pointer;
-    padding-bottom: 4px;
-
 }
 
 .title_jy::after {
@@ -606,4 +608,5 @@ div>.text_jy {
         pointer-events: auto;
     }
 }
+
 
