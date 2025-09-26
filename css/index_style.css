@@ -36,7 +36,6 @@
     margin: 0;
 }
 
-
 .container {
     display: grid;
     grid-template-columns: repeat(4, minmax(240px, 305px));
@@ -45,7 +44,6 @@
     padding: 0 clamp(16px, 5vw, 40px);
     margin: 0 auto;
 }
-
 
 .card {
     width: 100%;
@@ -60,7 +58,6 @@
     object-fit: cover;
     display: block;
 }
-
 
 .card-text {
     flex: 1;
@@ -155,7 +152,6 @@ h1 {
     font-weight: 700;
 }
 
-
 .collectionWorld_sc {
     display: flex;
     justify-content: center;
@@ -227,36 +223,33 @@ h1 {
     margin: 0 auto;
     box-sizing: border-box;
     margin-bottom: 50px;
-    padding: 0 100px;
-
 }
 
-/* 영상자료 */
+/* ✅ 영상자료 / 공지사항 제목 중앙정렬 + 줄바꿈 방지 */
 .video_material_title_jy {
-    margin: 0 auto;
-    width:auto;
-    max-width:100%;
-    line-height:1.25;
+    width: auto !important;
+    max-width: none !important;
+    margin: 0 auto 20px;
     font-size: 36px;
-    margin-bottom: 20px;
     font-weight: 700;
+    text-align: center;
+    white-space: nowrap;
+    word-break: keep-all;
 }
 
-/* 더보기 */
 .video_material_moreBtn_jy {
+    text-align: right;
     margin: 0;
     font-size: 20px;
     margin-bottom: 20px;
     font-weight: 600;
-
-
+    white-space: nowrap;
+    word-break: keep-all;
 }
 
 .video_material_moreBtn_jy a {
     color: inherit;
-    /* 글자색 상속 */
     text-decoration: none;
-    /* 밑줄 제거 */
 }
 
 .video_material_img_box_jy {
@@ -287,14 +280,11 @@ div>.text_jy {
     font-size: 16px;
 }
 
-
-/* 밑줄 애니메이션 */
 .title_jy {
-    line-height:1.25;
-    padding-bottom:6px;
     position: relative;
     display: inline-block;
     cursor: pointer;
+    padding-bottom: 4px;
 }
 
 .title_jy::after {
@@ -312,19 +302,19 @@ div>.text_jy {
     width: 100%;
 }
 
-
-
-
-
-/* notice */
-
-
 .notice_box_jy {
     max-width: 1520px;
     width: 100%;
     box-sizing: border-box;
     margin: 0 auto;
-    padding: 0 100px;
+}
+
+.notice_box_jy .video_material_title_jy {
+    width: auto !important;
+    margin: 0 auto 20px;
+    text-align: center;
+    white-space: nowrap;
+    word-break: keep-all;
 }
 
 .notice_text_box_jy {
@@ -332,7 +322,6 @@ div>.text_jy {
     width: 100%;
     margin: 0 auto;
     margin-bottom: 100px;
-
 }
 
 .line_box_jy {
@@ -353,34 +342,26 @@ div>.text_jy {
     margin-top: 10px;
     margin-bottom: 10px;
     box-sizing: border-box;
-
 }
 
 .notice_text_jy>p {
     display: flex;
     align-items: center;
-    /* 수직 가운데 */
     justify-content: center;
-
 }
-
-
 
 .text_3_jy p {
     font-size: 18px;
     font-weight: 600;
 }
 
-
 .notice_text_1_jy {
-
     flex: 1;
 }
 
 .text_1_jy {
     font-weight: 600;
 }
-
 
 .notice_text_2_jy {
     font-size: 16px;
@@ -394,25 +375,17 @@ div>.text_jy {
 
 .notice_text_jy a {
     color: inherit;
-    /* 글자색 상속 */
     text-decoration: none;
-    /* 밑줄 제거 */
     margin-bottom: 10px;
 }
 
-
-
 .text_2_jy {
     color: #212121;
-    /* 기본 텍스트 색상 */
     transition: color 0.3s ease;
-    /* 부드럽게 전환 */
 }
 
 .text_2_jy:hover {
     color: #D0B890;
-    /* 마우스 올렸을 때 색상 */
-
 }
 
 @media (max-width: 1024px) {
@@ -454,7 +427,6 @@ div>.text_jy {
 
     .notice_text_1_jy {
         font-size: 14px;
-
     }
 
     .notice_text_2_jy {
@@ -502,7 +474,6 @@ div>.text_jy {
 @media (hover: hover) and (min-width: 1025px) {
     .card {
         position: relative;
-
         overflow: hidden;
         transform-style: preserve-3d;
         transition: transform .25s ease, box-shadow .25s ease;
@@ -523,8 +494,7 @@ div>.text_jy {
         content: "";
         position: absolute;
         inset: 0;
-        background: radial-gradient(600px 400px at var(--mx, 50%) var(--my, 50%),
-                rgba(255, 255, 255, .28), transparent 60%);
+        background: radial-gradient(600px 400px at var(--mx, 50%) var(--my, 50%), rgba(255, 255, 255, .28), transparent 60%);
         mix-blend-mode: screen;
         opacity: 0;
         transition: opacity .25s ease;
@@ -554,7 +524,6 @@ div>.text_jy {
 
     .card.is-hovered {
         transform: scale(1.02);
-        /* rotateX, rotateY 제거 */
         box-shadow: 0 18px 40px rgba(0, 0, 0, .18);
     }
 
@@ -576,7 +545,6 @@ div>.text_jy {
         opacity: 1;
     }
 }
-
 
 @media (max-width: 1024px),
 (hover: none) {
@@ -608,5 +576,3 @@ div>.text_jy {
         pointer-events: auto;
     }
 }
-
-
