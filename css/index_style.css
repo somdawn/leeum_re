@@ -242,7 +242,6 @@ h1 {
 
 /* 더보기 */
 .video_material_moreBtn_jy {
-    text-align: right;
     margin: 0;
     font-size: 20px;
     margin-bottom: 20px;
@@ -607,3 +606,4 @@ div>.text_jy {
         pointer-events: auto;
     }
 }
+
